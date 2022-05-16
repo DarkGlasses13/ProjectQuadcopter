@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabs:
   - {fileID: 5917012183079924583, guid: b1fe09e495ac6734dbd206a74bb44d76, type: 3}
-  _detectionRange: 25
+  _moveSpeed: 1
+  _rangeDetector: 40
+  _speedDeparture: 0.03

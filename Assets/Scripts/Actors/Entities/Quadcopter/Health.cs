@@ -19,6 +19,7 @@ public class Health:MonoBehaviour
 
             if (_hp == 0)
             {
+                Debug.Log("Убили");
                 OnDie?.Invoke();
             }
         }
@@ -43,6 +44,7 @@ public class Health:MonoBehaviour
     {
         if (HP > 0)
         {
+            Debug.Log("Нанесли урон");
             HP -= 1;
             return;
         }

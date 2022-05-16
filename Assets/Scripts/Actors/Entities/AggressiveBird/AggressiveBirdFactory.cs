@@ -13,8 +13,15 @@ namespace Assets.Scripts
             AggressiveBird aggressiveBird = Object.Instantiate(_config.Prefab);
             aggressiveBird.gameObject.AddComponent<Mover>().SetSelfSpeed(_config.SelfSpeed);
             aggressiveBird.gameObject.AddComponent<Disappearer>().SetDisappearPoint(new Vector3(0, 0 , -20));
-            aggressiveBird.AddReaction<CollisionDetector>(new CausingDamage(_target.GetComponent<Health>()));
-            aggressiveBird.AddReaction<FrontDetector>(new CryReaction()).SetDetectionDistance(_config.DetectionDistance);
+           
+            SpecialReactionDataBase specialCollision = new SpecialReactionDataBase();
+            aggressiveBird.AddDetector<CollisionDetector>(specialCollision);
+            specialCollision.AddReaction<Quadcopter>(new CausingDamage(_target.GetComponent<Health>()));
+
+            GeneralReactionDataBase generalFront = new GeneralReactionDataBase();
+            aggressiveBird.AddDetector<FrontDetector>(generalFront).SetDetectionDistance(_config.DetectionDistance);
+            generalFront.AddGeneralReaction(new CryReaction());
+
             return aggressiveBird;
         }
     }

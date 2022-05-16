@@ -13,7 +13,11 @@ namespace Assets.Scripts
             Clothesline clothesline = Object.Instantiate(_config.Prefab);
             clothesline.gameObject.AddComponent<Mover>();
             clothesline.gameObject.AddComponent<Disappearer>();
-            clothesline.AddReaction<CollisionDetector>(new CausingDamage(_target.GetComponent<Health>()));
+
+            SpecialReactionDataBase specialCollision = new SpecialReactionDataBase();
+            clothesline.AddDetector<CollisionDetector>(specialCollision);
+            specialCollision.AddReaction<Quadcopter>(new CausingDamage(_target.GetComponent<Health>()));
+            
             return clothesline;
         }
     }

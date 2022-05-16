@@ -4,11 +4,18 @@ namespace Assets.Scripts
 {
     public abstract class ReactableEntity : Entity
     {
-        public D AddReaction<D>(IReaction reaction) where D : Component
+        public D AddDetector<D>(ReactionDataBase reactionDataBase) where D : Detector 
         {
-            IDetector detector = gameObject.AddComponent<D>() as IDetector;
-            detector.OnDetect += reaction.React;
-            return detector as D;
+            if (gameObject.TryGetComponent<D>(out D detector))
+            {
+                Debug.Log("Ошибка, такой компонент уже есть");
+                return detector;
+            }
+
+            Detector detectors = gameObject.AddComponent<D>() as Detector;
+            detectors.SetParametrs(reactionDataBase);
+            
+            return detectors as D;
         }
     }
 }

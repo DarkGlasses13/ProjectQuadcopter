@@ -1,16 +1,19 @@
-﻿using System;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
-namespace Assets.Scripts
+public class CollisionDetector : Detector
 {
-    public class CollisionDetector : MonoBehaviour, IDetector
+    private void OnTriggerEnter(Collider other)
     {
-        public event Action OnDetect;
-
-        private void OnTriggerEnter(Collider other)
+        if (other.TryGetComponent<Entity>(out Entity entity))
         {
-            if (other.TryGetComponent(out Quadcopter quadcopter))
-                OnDetect?.Invoke();
+            InvokeDetector(entity);
+            return;
         }
+
+        Debug.Log("Ошибка, обьект" + this.gameObject.name + " столкнулся не с сущностью");
     }
 }
