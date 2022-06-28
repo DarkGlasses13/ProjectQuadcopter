@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1102 &-5723469043039112383
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShoveOutRight
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 22f36ad24a7e5ab4caf70819b150905e, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-2907004964475530726
 AnimatorState:
   serializedVersion: 6
@@ -7,7 +33,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LeanOuting
+  m_Name: ShoveSide
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -38,6 +64,12 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -2907004964475530726}
     m_Position: {x: 330, y: 120, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -671018007577291679}
+    m_Position: {x: 365, y: 185, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -5723469043039112383}
+    m_Position: {x: 400, y: 250, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -48,6 +80,32 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 50, y: 220, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -2907004964475530726}
+--- !u!1102 &-671018007577291679
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShoveOutLeft
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: a174474ceca76cb48a8a909cd6dcc1f4, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -57,7 +115,7 @@ AnimatorController:
   m_Name: NetGuy
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: LeanOutingSide
+  - m_Name: ShoveSide
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -82,10 +140,10 @@ BlendTree:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LeanOuting
+  m_Name: ShoveSide
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: d19d47c4c8e49854d880b7d26745c360, type: 2}
+    m_Motion: {fileID: 7400000, guid: 4caddd85f19008845a25493511eed266, type: 2}
     m_Threshold: -1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -101,14 +159,14 @@ BlendTree:
     m_DirectBlendParameter: LeanOutingSide
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 4caddd85f19008845a25493511eed266, type: 2}
+    m_Motion: {fileID: 7400000, guid: d19d47c4c8e49854d880b7d26745c360, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: LeanOutingSide
     m_Mirror: 0
-  m_BlendParameter: LeanOutingSide
+  m_BlendParameter: ShoveSide
   m_BlendParameterY: LeanOutingSide
   m_MinThreshold: -1
   m_MaxThreshold: 1

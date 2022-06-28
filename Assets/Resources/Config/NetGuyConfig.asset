@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f1eeb6f3d8a29438351067a25733f8, type: 3}
   m_Name: NetGuyConfig
   m_EditorClassIdentifier: 
-  _prefabs:
+  _netGuyPrefabs:
   - {fileID: 5917012183079924583, guid: b1fe09e495ac6734dbd206a74bb44d76, type: 3}
+<<<<<<< Updated upstream
   _detectionRadius: 70
   _semiMajorAxis: 3
+=======
+  _netPrefabs:
+  - {fileID: 310586760892719651, guid: eeda91aa78d323643a431f96f359f019, type: 3}
+  _detectionDistance: 70
+  _shoveOutSpeed: 5
+  _shoveInSpeed: 8
+>>>>>>> Stashed changes

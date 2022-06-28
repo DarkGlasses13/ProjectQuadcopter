@@ -15,7 +15,17 @@ public class WayMatrix
     public WayMatrix()
     {
         _matrix = new Vector2[Height, Width];
+<<<<<<< Updated upstream
         float xPositionValue = Spacing;
+=======
+        DisappearPoint = new(0, 0, -50);
+        Build();
+    }
+
+    private void Build()
+    {
+        float xPosition = VerticalSpacing;
+>>>>>>> Stashed changes
 
         for (int x = 0; x < Height; x++)
         {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3975519692712307252}
   - component: {fileID: 3995690560812253251}
   m_Layer: 0
-  m_Name: Window
+  m_Name: Window2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,14 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< Updated upstream:Assets/Resources/Prefabs/Environment/Window.prefab
   - {fileID: 2100000, guid: 7e44279ec3a2cd4449c8c75171a221f8, type: 2}
+=======
+  - {fileID: 5420785251534922100, guid: acd2952eefe620e4387149b7363de371, type: 3}
+  - {fileID: -8656872974198307469, guid: acd2952eefe620e4387149b7363de371, type: 3}
+  - {fileID: 8999676466967722699, guid: acd2952eefe620e4387149b7363de371, type: 3}
+  - {fileID: 8556262120643298411, guid: acd2952eefe620e4387149b7363de371, type: 3}
+>>>>>>> Stashed changes:Assets/Resources/Prefabs/Chunks/Windows/Window2.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

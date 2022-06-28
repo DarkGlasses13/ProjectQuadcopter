@@ -31,11 +31,34 @@ namespace Assets.Scripts
         public int ClotheslineDensity => _clothesLineDensity;
         public int NetGuyDensity => _netGuyDensity;
 
+<<<<<<< Updated upstream
         public Container EntitiesContainer { get; private set; }
 
         public void Init(City city)
         {
             EntitiesContainer = ContainerService.GetCreatedContainer("Entities", city.transform, Vector3.zero);
+=======
+        public Quadcopter EnableQuadcopter(Container entityContainer)
+        {
+            LifeCounter lifeCounter = FindObjectOfType<LifeCounter>();
+            ChargeCounter chargeCounter = FindObjectOfType<ChargeCounter>();
+            _quadcopter = GetCreatedEntity(new QuadcopterFactory(_quadcopterConfig, entityContainer, lifeCounter, chargeCounter));
+            _quadcopter.gameObject.SetActive(false);
+            return _quadcopter;
+        } 
+
+        public void EnableCarTraffic(Container entityContainer, GameStopper gameStopper)
+        {
+            _pools[typeof(Car)] = new Pool<Car>(new CarFactory(_carConfig), entityContainer, 10);
+            gameStopper.OnPlay += SpawnCars;
+        }
+
+        public void EnableAggressiveBirds(Container entityContainer, GameStopper gameStopper)
+        {
+            _pools[typeof(AggressiveBird)] = new Pool<AggressiveBird>(new AggressiveBirdFactory(_aggressiveBirdConfig), entityContainer, 10);
+            gameStopper.OnPlay += SpawnAggressiveBirds;
+        }
+>>>>>>> Stashed changes
 
             _pools[typeof(AggressiveBird)] = new Pool<AggressiveBird>(new AggressiveBirdFactory(_aggressiveBirdConfig), EntitiesContainer, 10);
             _pools[typeof(Car)] = new Pool<Car>(new CarFactory(_carConfig), EntitiesContainer, 10);

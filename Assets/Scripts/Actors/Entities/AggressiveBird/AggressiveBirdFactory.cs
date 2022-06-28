@@ -8,8 +8,15 @@ namespace Assets.Scripts
 
         public override AggressiveBird GetCreated()
         {
+<<<<<<< Updated upstream
             AggressiveBird aggressiveBird = Object.Instantiate(_config.Prefab);
             Mover mover = aggressiveBird.gameObject.AddComponent<Mover>();
+=======
+            AggressiveBird aggressiveBird = Object.Instantiate(_config.AggressiveBird);
+
+            aggressiveBird.gameObject.AddComponent<Mover>().Receive(_config);
+
+>>>>>>> Stashed changes
             Disappearer disappearer = aggressiveBird.gameObject.AddComponent<Disappearer>();
             aggressiveBird.AddReaction<CollisionDetector, Quadcopter, Car>(new AggressiveBirdKillReaction());
             aggressiveBird.AddReaction<CollisionDetector, NetGuy>(new FreezeReaction());

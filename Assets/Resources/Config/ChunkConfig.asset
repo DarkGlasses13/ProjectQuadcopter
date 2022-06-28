@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb4f5c405501e5478c6ab5ea8fab3e7, type: 3}
   m_Name: ChunkConfig
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   _prefabs:
   - {fileID: 7991555287911481885, guid: 7e09c5cc818acd042962a12b0e4e8abc, type: 3}
   - {fileID: 6328417353234506659, guid: 1adb428b4a2889147966786232580af1, type: 3}
@@ -21,3 +22,17 @@ MonoBehaviour:
   - {fileID: 7946600438839257562, guid: d32b812a8f915fd4a84c41e46755c1a0, type: 3}
   - {fileID: -1925305964513043887, guid: 01fe2093536242a42986ac4722490f21, type: 3}
   _moveSpeed: 1
+=======
+  _districtsPrefab:
+  - {fileID: 2537632661150493842, guid: 663017b3244460340b8f95f34441cbfd, type: 3}
+  - {fileID: 2537632661150493842, guid: 2440fc0970897c644be8b935a898503f, type: 3}
+  - {fileID: 2435827300984679549, guid: d146b6a01c733d84983581ef89bf0867, type: 3}
+  - {fileID: 2224033142950272196, guid: 614b19a6cfc9d4a4189d7b1c59775ca1, type: 3}
+  - {fileID: -7031122738548866231, guid: 4eeaf81de868e844cac89dc96c5062d6, type: 3}
+  - {fileID: 2224033142950272196, guid: 1402e1696d26f364eb8f84c394887fbe, type: 3}
+  - {fileID: 2435827300984679549, guid: bfd60fe331ba212419275a38aa9ff287, type: 3}
+  _roadPrefab: {fileID: 1362130198009995443, guid: c6bf8b0f60100384fb47103b13840fc1,
+    type: 3}
+  _startableChunk: {fileID: 1362130198009995443, guid: 624b177c4e1643f409db6bf2b1026285,
+    type: 3}
+>>>>>>> Stashed changes

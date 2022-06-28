@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9bd0cc0f1124a4ea386607d6185045, type: 3}
   m_Name: CarConfig
   m_EditorClassIdentifier: 
-  _prefabs:
-  - {fileID: 5066961233641141595, guid: f4deb85e11c91ea479774027be804021, type: 3}
+  _carPrefabs:
   - {fileID: 5066961233641141595, guid: efa06b13816b97e4a9ce70f0beb67db8, type: 3}
+  - {fileID: 5066961233641141595, guid: f4deb85e11c91ea479774027be804021, type: 3}
   _selfSpeed: 25
   _detectionDistance: 25
